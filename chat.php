@@ -1,9 +1,9 @@
 <?php
     session_start();
     $date = date("Y/m/d H:i:s"); 
-    $dsn='mysql:dbname=tb220600db;host=localhost';
-    $user = 'tb-220600';
-    $password = 'e2Jrg7mBzm';
+    $dsn='mysql:dbname=*******;host=localhost';
+    $user = '******';
+    $password = '*******';
     $pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
     $sql = "CREATE TABLE IF NOT EXISTS chatDeta"
     ." ("
