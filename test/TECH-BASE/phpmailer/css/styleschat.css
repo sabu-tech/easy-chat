@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background: skyblue;
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 120px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  text-align: center;
+}
+
+.container {
+  padding:18px;
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.messages li {
+  display: flex;
+  margin-top: 0px;
+}
+
+li.right-side {
+  flex-direction: row-reverse;
+}
+
+.pic {
+  /* background-color: pink; */
+  width: 80px;
+  text-align: center;
+}
+
+.pic img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+}
+
+.text{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px 24px;
+  max-width: 60%;
+  line-height: 1.8;
+  position: relative;
+}
+
+.text::before {
+  content: '';
+  width: 0;
+  height: 0;
+  /* border: 8px solid #fff; */
+  border: 8px solid transparent;
+  position: absolute;
+}
+
+.left-side .text::before {
+  top: 12px;
+  left: -16px;
+  border-right-color: #fff;
+}
+
+.right-side .text::before {
+  top: 12px;
+  right: -16px;
+  border-left-color: #fff;
+}
+
+.date{
+  vertical-align: bottom;
+}
+
+.commentbox{
+  width: 100%;
+  background-color: #89c7de;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+
+  position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+  position: fixed;
+  z-index: 1;
+}
+
+header {
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+}
